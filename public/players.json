@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.ibb.co.com/31NHLPv/OIP.jpg",
+        "name": "John Smith",
+        "country": "Australia",
+        "category": "Batsman",
+        "hand_batting": "Right-hand",
+        "price": 1200000
+    },
+    {
+        "id": 2,
+        "img": "https://i.ibb.co.com/DWV3Vc9/Ravi-Kumar-photo.jpg",
+        "name": "Ravi Kumar",
+        "country": "India",
+        "category": "Bowler",
+        "hand_batting": "Left-hand",
+        "price": 900000
+    },
+    {
+        "id": 3,
+        "img": "https://i.ibb.co.com/LJ7kyzk/download.jpg",
+        "name": "James Anderson",
+        "country": "England",
+        "category": "Bowler",
+        "hand_batting": "Right-hand",
+        "price": 1100000
+    },
+    {
+        "id": 4,
+        "img": "https://i.ibb.co.com/02dfykr/download.jpg",
+        "name": "David Warner",
+        "country": "Australia",
+        "category": "Batsman",
+        "hand_batting": "Left-hand",
+        "price": 1500000
+    },
+    {
+        "id": 5,
+        "img": "https://i.ibb.co.com/j4xSTm1/download.jpg",
+        "name": "Shakib Al Hasan",
+        "country": "Bangladesh",
+        "category": "All-rounder",
+        "hand_batting": "Left-hand",
+        "price": 1300000
+    },
+    {
+        "id": 6,
+        "img": "https://i.ibb.co.com/HV0qqZ5/download.jpg",
+        "name": "Kane Williamson",
+        "country": "New Zealand",
+        "category": "Batsman",
+        "hand_batting": "Right-hand",
+        "price": 1250000
+    },
+    {
+        "id": 7,
+        "img": "https://i.ibb.co.com/dkXQStB/download.jpg",
+        "name": "Mitchell Starc",
+        "country": "Australia",
+        "category": "Bowler",
+        "hand_batting": "Left-hand",
+        "price": 1150000
+    },
+    {
+        "id": 8,
+        "img": "https://i.ibb.co.com/YNwfbzQ/OIP.jpg",
+        "name": "Virat Kohli",
+        "country": "India",
+        "category": "Batsman",
+        "hand_batting": "Right-hand",
+        "price": 1600000
+    },
+    {
+        "id": 9,
+        "img": "https://i.ibb.co.com/kSHpKmK/download.jpg",
+        "name": "Jos Buttler",
+        "country": "England",
+        "category": "Wicketkeeper",
+        "hand_batting": "Right-hand",
+        "price": 1400000
+    },
+    {
+        "id": 10,
+        "img": "https://i.ibb.co.com/02KRnpz/download.jpg",
+        "name": "Trent Boult",
+        "country": "New Zealand",
+        "category": "Bowler",
+        "hand_batting": "Left-hand",
+        "price": 1050000
+    },
+    {
+        "id": 11,
+        "img": "https://i.ibb.co.com/488JLw8/download.jpg",
+        "name": "Ben Stokes",
+        "country": "England",
+        "category": "All-rounder",
+        "hand_batting": "Left-hand",
+        "price": 1450000
+    },
+    {
+        "id": 12,
+        "img": "https://i.ibb.co.com/VS70x2w/download.jpg",
+        "name": "Faf du Plessis",
+        "country": "South Africa",
+        "category": "Batsman",
+        "hand_batting": "Right-hand",
+        "price": 1350000
+      }
+]
