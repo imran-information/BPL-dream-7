@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Header = ({ handleClaimCoin }) => {
     const notify = () => {
-        toast.success("Success Notification !", {
+        toast.success("Success Claim !", {
             position: "top-center"
         });
     }

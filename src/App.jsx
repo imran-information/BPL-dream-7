@@ -10,6 +10,12 @@ import Footer from './components/Footer/Footer'
 function App() {
   const [toggle, setToggle] = useState(true)
   const [claimCoin, setClaimCoin] = useState(0)
+  const [selectedPlayers, setSelectedPlayers] = useState([])
+
+  const handleSelectedPlayer = (player) => {
+    const newPlayers = [...selectedPlayers, player]
+    setSelectedPlayers(newPlayers)
+  }
 
 
   const handleClaimCoin = (coin, notify) => {
@@ -33,7 +39,7 @@ function App() {
       <Navbar claimCoin={claimCoin}></Navbar>
       <Header handleClaimCoin={handleClaimCoin}></Header>
       <main className='w-10/12 mx-auto'>
-        <Players toggle={toggle} handleToggleBtn={handleToggleBtn}></Players>
+        <Players selectedPlayers={selectedPlayers} handleSelectedPlayer={handleSelectedPlayer} toggle={toggle} handleToggleBtn={handleToggleBtn}></Players>
       </main>
       <Subscribe className=""></Subscribe>
       <Footer></Footer>
