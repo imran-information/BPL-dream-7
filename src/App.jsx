@@ -12,15 +12,44 @@ function App() {
   const [claimCoin, setClaimCoin] = useState(0)
   const [selectedPlayers, setSelectedPlayers] = useState([])
 
-  const handleSelectedPlayer = (player) => {
-    const newPlayers = [...selectedPlayers, player]
-    setSelectedPlayers(newPlayers)
+
+  const handleRemovePlayer = (pla, notifyPlayerRemove) => {
+    const remove = selectedPlayers.filter(pID => pID.id !== pla.id);
+    setSelectedPlayers(remove)
+    setClaimCoin(claimCoin + pla.price)
+    notifyPlayerRemove()
+
+
+  }
+
+  const handleSelectedPlayer = (player, notify, notifyWarning, notifyAlradyAddWarning, notifyAlready6Players) => {
+    const alredyAddPlayer = selectedPlayers.find(newPlayer => newPlayer.id == player.id)
+    if (claimCoin >= player.price) {
+      if (alredyAddPlayer) {
+        notifyAlradyAddWarning()
+      }
+      else {
+        if (selectedPlayers.length == 6) {
+          notifyAlready6Players()
+
+        }
+        else {
+          const newPlayers = [...selectedPlayers, player]
+          setSelectedPlayers(newPlayers)
+          // notify()
+          setClaimCoin(claimCoin - player.price)
+        }
+      }
+    }
+    else {
+      notifyWarning()
+    }
   }
 
 
-  const handleClaimCoin = (coin, notify) => {
+  const handleClaimCoin = (coin, notify1) => {
     setClaimCoin(claimCoin + coin)
-    notify()
+    // notify1()
 
   }
 
@@ -39,7 +68,7 @@ function App() {
       <Navbar claimCoin={claimCoin}></Navbar>
       <Header handleClaimCoin={handleClaimCoin}></Header>
       <main className='w-10/12 mx-auto'>
-        <Players selectedPlayers={selectedPlayers} handleSelectedPlayer={handleSelectedPlayer} toggle={toggle} handleToggleBtn={handleToggleBtn}></Players>
+        <Players handleRemovePlayer={handleRemovePlayer} selectedPlayers={selectedPlayers} handleSelectedPlayer={handleSelectedPlayer} toggle={toggle} handleToggleBtn={handleToggleBtn}></Players>
       </main>
       <Subscribe className=""></Subscribe>
       <Footer></Footer>

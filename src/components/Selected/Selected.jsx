@@ -1,7 +1,14 @@
 import PropTypes from "prop-types";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const Selected = ({ pla }) => {
+const Selected = ({ pla, handleRemovePlayer }) => {
     const { img, name, country, category, hand_batting } = pla;
+    const notifyPlayerRemove = () => {
+        toast.warn("Remove Success !", {
+            position: "top-center"
+        });
+    }
 
     return (
         <div className="border w-full p-5 rounded">
@@ -14,13 +21,15 @@ const Selected = ({ pla }) => {
             </div>
 
             <div className="text-center">
-                <button className='text-base font-semibold hover:from-pink-500 hover:to-orange-500 bg-gray-200 py-3 px-3 rounded-lg border-2 bg-gradient-to-r from-indigo-500 text-white via-purple-500 to-pink-500 border-fuchsia-200'>Remove Player</button>
+                <button onClick={() => handleRemovePlayer(pla, notifyPlayerRemove)} className='text-base font-semibold hover:from-pink-500 hover:to-orange-500 bg-gray-200 py-3 px-3 rounded-lg border-2 bg-gradient-to-r from-indigo-500 text-white via-purple-500 to-pink-500 border-fuchsia-200'>Remove Player</button>
+                <ToastContainer></ToastContainer>
             </div>
         </div>
     );
 };
 
 Selected.propTypes = {
-    pla: PropTypes.array
+    pla: PropTypes.object,
+    handleRemovePlayer: PropTypes.func,
 }
 export default Selected;

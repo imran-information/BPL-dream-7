@@ -2,10 +2,10 @@ import LogoFooter from '../../assets/logo-footer.png'
 const Footer = () => {
     return (
         <footer className='bg-[#06091A] pt-96'>
-            <div className='flex justify-center '>
+            <div className='flex justify-center flex-wrap '>
                 <img src={LogoFooter} alt="" />
             </div>
-            <div className='flex justify-between  w-10/12 mx-auto my-10 '>
+            <div className='grid grid-cols-1 md:flex justify-between  w-10/12 mx-auto my-10 '>
                 <div className="">
                     <h3 className='text-xl mb-4 font-semibold text-white'>About Us</h3>
                     <p className='font-semibold text-slate-400 my-2'>We are a passionate team <br /> dedicated to providing the best <br /> services to our customers.</p>
