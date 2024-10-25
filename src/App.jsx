@@ -6,9 +6,19 @@ import Players from './components/Players/Players'
 import Subscribe from './components/Subscribe/Subscribe'
 import Footer from './components/Footer/Footer'
 
+
 function App() {
   const [toggle, setToggle] = useState(true)
-  console.log(toggle);
+  const [claimCoin, setClaimCoin] = useState(0)
+
+
+  const handleClaimCoin = (coin, notify) => {
+    setClaimCoin(claimCoin + coin)
+    notify()
+
+  }
+
+
 
   const handleToggleBtn = (selectedBtn) => {
     if (selectedBtn == 'available') {
@@ -20,8 +30,8 @@ function App() {
   }
   return (
     <>
-      <Navbar></Navbar>
-      <Header></Header>
+      <Navbar claimCoin={claimCoin}></Navbar>
+      <Header handleClaimCoin={handleClaimCoin}></Header>
       <main className='w-10/12 mx-auto'>
         <Players toggle={toggle} handleToggleBtn={handleToggleBtn}></Players>
       </main>
