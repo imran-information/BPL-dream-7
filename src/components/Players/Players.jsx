@@ -29,7 +29,7 @@ const Players = ({ handleToggleBtn, toggle, handleSelectedPlayer, selectedPlayer
                 </div>
             </div>
 
-            <div className="grid md:grid-cols-3 grid-cols-1 gap-4 my-8">
+            <div className={`${toggle ? "grid md:grid-cols-3 grid-cols-1 gap-4 my-8":"grid md:grid-cols-1 grid-cols-1 gap-4 my-8"}`}>
                 {
                     toggle ? players.map(player => <Player handleSelectedPlayer={handleSelectedPlayer} key={player.id} player={player}></Player>) : selectedPlayers.map(pla => <Selected key={pla.id} pla={pla} handleRemovePlayer={handleRemovePlayer}></Selected>)
                 }

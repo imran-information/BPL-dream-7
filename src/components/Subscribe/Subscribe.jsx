@@ -1,6 +1,6 @@
 const Subscribe = () => {
     return (
-        <div className="rounded-lg  border-fuchsia-200 p-5 border-2 my-20 w-10/12 mx-auto z-10 relative top-64 md:top-96">
+        <div className="rounded-lg  backdrop-blur-xl border-fuchsia-200 p-5 border-2 my-20 w-10/12 mx-auto z-10 relative top-64 md:top-96">
             <div className="text-center md:p-44 bg-img">
                 <h1 className="text-4xl font-bold my-3">Subscribe to our Newsletter</h1>
                 <p className="text-xl font-medium text-gray-500">Get the latest updates and news right in your inbox!</p>
