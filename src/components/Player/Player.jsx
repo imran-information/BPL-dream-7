@@ -34,14 +34,16 @@ const Player = ({ player, handleSelectedPlayer }) => {
         <div className="border-2 p-5 rounded-md border-fuchsia-200">
             <img className="rounded w-full h-72" src={img} alt="" />
             <div className="flex items-center font-semibold text-xl mt-4">
-                <p className="text-2xl text-gray-500 mr-1"><IoPersonCircleOutline></IoPersonCircleOutline></p>
+                <p className="text-2xl text-gray-500 mr-1">
+                    <IoPersonCircleOutline></IoPersonCircleOutline>
+                </p>
                 <h1 className="">{name}</h1>
             </div>
             <div className="flex justify-between items-center  text-base text-gray-500 font-semibold">
-                <p className="flex justify-center items-center">
+                <div className="flex justify-center items-center">
                     <FaFlag className="font-bold text-lg text-gray-500 mr-3"></FaFlag>
                     <p className="">{country}</p>
-                </p>
+                </div>
                 <p className="font-bold border-2 rounded-lg px-3 py-2 border-fuchsia-200">{category}</p>
             </div>
             <hr className="my-3" />

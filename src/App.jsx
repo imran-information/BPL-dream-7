@@ -5,7 +5,8 @@ import Navbar from './components/Navbar/Navbar'
 import Players from './components/Players/Players'
 import Subscribe from './components/Subscribe/Subscribe'
 import Footer from './components/Footer/Footer'
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [toggle, setToggle] = useState(true)
@@ -68,11 +69,13 @@ function App() {
     <>
       <Navbar claimCoin={claimCoin}></Navbar>
       <Header handleClaimCoin={handleClaimCoin}></Header>
+
       <main className='w-10/12 mx-auto'>
         <Players handleRemovePlayer={handleRemovePlayer} selectedPlayers={selectedPlayers} handleSelectedPlayer={handleSelectedPlayer} toggle={toggle} handleToggleBtn={handleToggleBtn}></Players>
       </main>
       <Subscribe className=""></Subscribe>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </>
   )
 }

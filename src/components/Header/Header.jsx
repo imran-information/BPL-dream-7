@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import Banner from '../../assets/banner-main.png'
-
 import './Header.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -14,7 +13,7 @@ const Header = ({ handleClaimCoin }) => {
 
 
     return (
-        <div className='bg-img bg-black  relative w-10/12 mx-auto my-6 text-center '>
+        <div className='bg-img bg-black relative w-10/12 mx-auto my-6 text-center '>
             <div className='h-[500px]'>
                 <div className='flex justify-center pt-10'>
                     <img src={Banner} alt="" />
