@@ -13,6 +13,7 @@ function App() {
   const [selectedPlayers, setSelectedPlayers] = useState([])
 
 
+
   const handleRemovePlayer = (pla, notifyPlayerRemove) => {
     const remove = selectedPlayers.filter(pID => pID.id !== pla.id);
     setSelectedPlayers(remove)
@@ -36,7 +37,7 @@ function App() {
         else {
           const newPlayers = [...selectedPlayers, player]
           setSelectedPlayers(newPlayers)
-          // notify()
+          notify()
           setClaimCoin(claimCoin - player.price)
         }
       }
@@ -49,7 +50,7 @@ function App() {
 
   const handleClaimCoin = (coin, notify1) => {
     setClaimCoin(claimCoin + coin)
-    // notify1()
+    notify1()
 
   }
 
